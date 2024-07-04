@@ -44,24 +44,17 @@
 
 当然，请看修正后的版本：
 
-1. **均方误差 (Mean Squared Error, MSE)**:
-   $
-   MSE = \left(1 - \frac{\text{predicted value}}{\text{actual value}}\right)^2
-   $
-   这个指标衡量了每个预测值与实际值之间的差异的平方，并且在代码中被计算为 `df_result$2`.
-
-2. **预测值与实际值的比率**:
-   $
+1. **预测值与实际值的比率**:
+   \[
    \text{Ratio} = \frac{\text{predicted value}}{\text{actual value}}
-   $
+   \]
    这个比率可以帮助理解预测值相对于实际值的大小关系，并在代码中被计算为 `df_result$3` 和 `df_result$4`.
 
-3. **比率的最大值**:
-   $
-   \text{Max Ratio} = \max\left(\frac{\text{predicted value}}{\text{actual value}}, \frac{\text{actual value}}{\text{predicted value}}\right)$
+2. **比率的最大值**:
+   \[
+   \text{Max Ratio} = \max\left(\frac{\text{predicted value}}{\text{actual value}}, \frac{\text{actual value}}{\text{predicted value}}\right)
+   \]
    这个指标考虑了预测值和实际值之间的两种比率，选择了它们的较大值，并在代码中被计算为 `df_result$5`.
-
-这些指标提供了多个角度来评估模型预测的准确性和偏差。在实际应用中，可以根据具体的问题和需求来选择适合的评估指标。
 
 
 ```python
